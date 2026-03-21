@@ -6,7 +6,7 @@ library(readr)
 ##########################################
 #load gene count data from featureCounts output
 fc <- read.table(
-  "/Users/qianzhao/Desktop/academics/thesis/data/aim 3/gene_counts.txt",
+  "gene_counts.txt",
   header = TRUE,
   sep = "\t",
   comment.char = "#",
