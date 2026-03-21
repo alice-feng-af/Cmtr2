@@ -19,6 +19,10 @@ RAW_DATA_DIR=~/01.RawData
 STAR_INDEX_DIR=~/04.Ref/star_index
 STAR_RESULTS_DIR=~/results/STAR
 
+#unzip genome reference sequence file and gene annotation file
+gunzip -c ~/04.Ref/genome.fa.gz  > "$GENOME_FA"
+gunzip -c ~/04.Ref/genome.gtf.gz > "$GENOME_GTF"
+
 #make directories for star index and alignment results
 mkdir -p "$STAR_INDEX_DIR" "$STAR_RESULTS_DIR"
 
