@@ -45,10 +45,6 @@ dds <- DESeqDataSetFromMatrix(
   design    = ~ condition
 )
 
-#pre-filtering: remove rows with reads below 10
-keep <- rowMeans(counts(dds, normalized=TRUE)) >= 10
-dds <- dds[keep, ]
-
 #run DESeq2
 dds <- DESeq(dds)
 
