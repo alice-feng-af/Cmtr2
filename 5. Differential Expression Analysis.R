@@ -328,7 +328,7 @@ library(stringr)
 #prepare gene list
 df$ensembl_clean <- sub("\\..*$", "", rownames(resOrdered))
 
-#for genes with multiple transcripts, keep the one with the largest abs val of Wald statistic
+#for genes with multiple ensembl versions, keep the one with the largest abs val of Wald statistic
 gene_df <- df |>
   dplyr::filter(!is.na(stat)) |>
   dplyr::group_by(ensembl_clean) |>
